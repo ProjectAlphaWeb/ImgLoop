@@ -23,16 +23,16 @@ h1:hover{
   text-shadow: 4px 2px #784383;
 }
 
-h3:hover{
+h4:hover{
   text-shadow: 2px 1px #DB5325;
 }
-h4:hover{
+h5:hover{
   text-shadow: 2px 1px #DB5325;
 }
 h4{
   color:white;
 }
-h3{
+h5{
   color:white;
 }
 hr {
