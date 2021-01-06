@@ -1,0 +1,169 @@
+body{
+	background: url(bgimg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+/*NAVIGATION BAR*/
+nav{
+	background:linear-gradient(135deg, rgba(121, 2, 176, 1), rgba(242, 0, 226, 1), rgba(242, 24, 0, 1), rgba(242, 89, 0, 1), rgba(242, 226, 0, 1));
+	font-weight: bolder;
+	font-size: 1.3em;
+	padding:0px;
+	border:2px solid white;
+	border-radius: 0px 0px 10px 10px;
+}
+ul{
+	margin-right: auto;
+}
+li{
+	margin: 0px 5px;
+	padding:0px;
+}
+li a:hover{
+	text-shadow: 1px 1px white;
+	border-bottom:3px solid rgb(53, 54, 53);
+	border-right:4px solid rgb(93, 94, 94);
+	border-radius: 2px;
+	background: rgba(255,255,255,.3);
+}
+/*COVER*/
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:35vh;
+	text-align: center;
+}
+
+#text{
+	font-size: 150%;
+	text-decoration: underline;
+	font-family: 'Acme', sans-serif;
+	color: white;
+	border: 3px solid white;
+	border-radius: 0px 15px;
+	background:linear-gradient(135deg, rgba(242, 226, 0, .3), rgba(242, 89, 0, .3), rgba(242, 24, 0, .3), rgba(242, 0, 226, .3), rgba(121, 2, 176, .3));
+	margin:80px 50px 10px 50px;
+	padding:10px 25px;
+	transition: 1s;
+}
+#text:hover{
+	text-shadow: 2px 2px black;
+	background:linear-gradient(135deg, rgba(121, 2, 176, .5), rgba(242, 0, 226, .5), rgba(242, 24, 0, .5), rgba(242, 89, 0, .5), rgba(242, 226, 0, .5));
+}
+/*CONTENT*/
+.grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+	grid-gap: 15px;
+	justify-items: center;
+}
+/*.grid img{
+	height: 200px;
+	width: 350px;
+	margin: 5px;
+	transition: 1s;
+	padding: 2px;
+}
+.grid img:hover{
+	transform:scale(1.1);*/
+}
+.middle{
+	/*position: absolute;*/
+	top: 50%
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.card{
+	background: rgba(1,1,1,0);
+	cursor: pointer;
+	width: 200px;
+	height: 200px;
+}
+.front, .back{
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .6s linear;
+}
+.front img{
+	height: 100%
+}
+.front{
+	transform: perspective(500px) rotateY(0deg);
+}
+.back{
+	background:white;
+	transform: perspective(500px) rotateY(180deg);
+}
+.back-content{
+	color: #2c3e50;
+	font-family: 'Acme', sans-serif; 
+	text-align: center;
+	vertical-align: baseline;
+	width: 100%;
+}
+.sm{
+	margin: 20px 0;
+}
+
+.sm img{
+	display: inline-flex;
+	width: 30px;
+	height:30px;
+	justify-content: center;
+	/*align-items: center;*/
+	color: #2c3e50;
+	font-size: 18px;
+	transition:0.4s;
+	border-radius: 50%;
+}
+.sm img:hover{
+	background: #2c3e50;
+	color: grey;
+}
+.card:hover >.front{
+	transform: perspective(500px) rotateY(-180deg);
+}
+.card:hover >.back{
+	transform: perspective(500px) rotateY(0deg);	
+}
+/*Footer*/
+#contact{
+	background:linear-gradient(135deg, rgba(121, 2, 176, 1), rgba(242, 0, 226, 1), rgba(242, 24, 0, 1), rgba(242, 89, 0, 1), rgba(242, 226, 0, 1));
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-size: 1.3em;
+	font-weight: bold;
+	border:2px solid white;
+	border-radius:10px 10px 0px 0px ;
+	margin: 0px;
+	padding: 10px;
+}
+
+#contact img{
+	border:1px solid white;
+	margin:  0px 5px;
+	height: 30px;
+	width: 30px;
+}
+#contact img:hover{
+	text-shadow: 1px 1px white;
+	border-bottom:3px solid rgb(53, 54, 53);
+	border-right:4px solid rgb(93, 94, 94);
+	border-radius: 2px;
+	background: rgba(255,255,255,.3);
+}
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
